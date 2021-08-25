@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "ca33a399-fcfb-4ecf-91f3-345c3837c966",
+		"name": "quantox-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"igor\",\r\n\t\"password\": \"Pass!234\",\r\n\t\"firstName\": \"Igor\",\r\n    \"lastName\": \"Novotni\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"igor\",\r\n\t\"password\": \"Pass!234\",\r\n\t\"firstName\": \"Igor\",\r\n    \"lastName\": \"Novotni\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create MACHINE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"ownerId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/machines",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"machines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "START MACHINE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"ownerId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/machines/start?uuid=35f4a3f9-731b-4a27-936f-991857e4164c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"machines",
+						"start"
+					],
+					"query": [
+						{
+							"key": "uuid",
+							"value": "35f4a3f9-731b-4a27-936f-991857e4164c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search MACHINES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/machines/search?status=RUNNING",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"machines",
+						"search"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "RUNNING"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
