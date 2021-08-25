@@ -27,7 +27,7 @@ public class MachineEntity {
 	private Long id;
 	
 	@Column(name = "uuid", nullable = false)
-	private String uid;
+	private String uuid;
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name = "status", nullable = false)
@@ -40,7 +40,7 @@ public class MachineEntity {
 	@Column(name = "createdAt", nullable = false)
 	private LocalDateTime createdAt;
 	
-	private boolean active;
+	private boolean active = true;
 
 	public Long getId() {
 		return id;
@@ -50,12 +50,12 @@ public class MachineEntity {
 		this.id = id;
 	}
 
-	public String getUid() {
-		return uid;
+	public String getUuid() {
+		return uuid;
 	}
 
-	public void setUid(String uid) {
-		this.uid = uid;
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
 	}
 
 	public Status getStatus() {

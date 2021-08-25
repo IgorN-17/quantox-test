@@ -27,6 +27,9 @@ public class UserEntity {
 	@Column(name = "password", nullable = false)
 	private String password;
 	
+	@Column(name = "salt", length = 100)
+	private String salt;
+	
 	@Column(name = "firstName", length = 100)
 	private String firstName;
 	
@@ -83,5 +86,14 @@ public class UserEntity {
 	public void setMachines(List<MachineEntity> machines) {
 		this.machines = machines;
 	}
+
+	public String getSalt() {
+		return salt;
+	}
+
+	public void setSalt(String salt) {
+		this.salt = salt;
+	}
+	
 	
 }
